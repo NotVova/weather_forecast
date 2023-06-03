@@ -1,0 +1,31 @@
+body {
+    background: url("/static/imgs/site_imgs/weather_bg.jpg");
+    width: 100%;
+    height: 100%;
+}
+
+main.bg {
+    display: flex;
+}
+
+.form-block {
+    background: #fff;
+    border-radius: 8px;
+    height: 350px;
+    width: 600px;
+    border: 10px solid #fff;
+    margin: 250px auto auto;
+}
+
+.name-input {
+    padding-top: 18px;
+    padding-bottom: 25px;
+}
+label {
+    color: #26062a;
+    font-size: 23px;
+}
+
+.main-form {
+    padding-bottom: 35px;
+}

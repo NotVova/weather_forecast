@@ -1,0 +1,29 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block content %}
+    <main class="bg">
+        <div class="form-block">
+            <form class="main-form" action="" method="POST">
+                {% csrf_token %}
+                <div class="name-input">
+                    <label for="input-city-name">Введите название города</label>
+                    <input class="form-control" id="input-city-name" type="text" placeholder="London" name="city-forecast">
+                </div>
+                <div class="submit-btn">
+                    <button type="submit" class="btn btn-primary btn-lg">Показать погоду</button>
+                </div>
+            </form>
+            {% if weather_forecast %}
+                <div class="alert alert-primary" role="alert">
+                    Погода в  городе {{ city }}  {{ weather_forecast }} °C!
+                </div>
+            {% endif %}
+            {% if error %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endif %}
+        </div>
+    </main>
+{% endblock %}
